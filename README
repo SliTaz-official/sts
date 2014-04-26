@@ -1,0 +1,27 @@
+SliTaz Tiny/Touch Screen desktop
+===============================================================================
+
+
+The goal of the sts desktop is to provide a nice experience on really small
+screens such as a 320x240 2.8" TFT or 800x480 5" HDMI/VGA. The desktop uses 
+Openbox window manager and LXpanel. Apps are started maximized and undecorated.
+The top panel provides icons of opened applications with a close button for 
+the current running application.
+
+Sts can be used on any screen but was coded for custom i486/ARM flavors. These
+flavors use a custom /etc/slitaz/applications.conf with sts-session as WM. Sts
+can also be started by Slim or with startx and an appropriate ~/.xsession file.
+
+
+Packages of interest
+--------------------
+Here are some tools that could be usefull for tiny/touch screens:
+
+	* xprop          : Window properties 
+	* xwininfo       : Window information
+	* xautomation    : Control X from cmdline
+	* mygestures     : Mouse gesture-recognition
+	* idesk          : Desktop icons
+
+
+===============================================================================
