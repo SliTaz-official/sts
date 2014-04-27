@@ -4,26 +4,28 @@
 #
 
 export STS_DESKTOP_WM="openbox"
+export STS_DESKTOP_ID="$$"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 data="/usr/share/slitaz/sts"
-obconf="${XDG_CONFIG_HOME}/openbox"
+sts="${XDG_CONFIG_HOME}/sts"
 
 # Ob sts-rc.xml
-if [ ! -f "${XDG_CONFIG_HOME}/openbox/sts-rc.xml" ]; then
-	mkdir -p ${obconf}
-	cp ${data}/openbox/sts-rc.xml ${obconf}
+if [ ! -f "${XDG_CONFIG_HOME}/sts/rc.xml" ]; then
+	mkdir -p ${sts}
+	cp ${data}/openbox/rc.xml ${sts}
 fi
 
 # Ob sts-autostart
-if [ ! -x "${XDG_CONFIG_HOME}/openbox/sts-autostart" ]; then
-	cp ${data}/openbox/sts-autostart ${obconf}
+if [ ! -x "${XDG_CONFIG_HOME}/sts/autostart" ]; then
+	cp ${data}/openbox/autostart ${sts}
+	chmod +x ${sts}/autostart
 fi
 
 # LXpanel configs
-if [ ! -d "${XDG_CONFIG_HOME}/openbox/lxpanel/sts" ]; then
+if [ ! -d "${XDG_CONFIG_HOME}/lxpanel/sts" ]; then
 	cp -rf ${data}/lxpanel ${XDG_CONFIG_HOME}
 fi
 
@@ -33,5 +35,4 @@ if [ -x "/usr/bin/idesk" ] && [ ! -d "${HOME}/.idesktop" ]; then
 fi
 
 # Start Openbox
-exec openbox --config-file ${obconf}/sts-rc.xml \
-	--startup ${obconf}/sts-autostart
+exec openbox --config-file ${sts}/rc.xml --startup ${sts}/autostart

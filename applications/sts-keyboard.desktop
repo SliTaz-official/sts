@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Virtual Keyboard
+Name[fr]=Clavier virtuel
+Exec=sts keyboard
+Icon=preferences-desktop-keyboard
+StartupNotify=tru

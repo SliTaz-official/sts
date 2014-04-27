@@ -53,6 +53,15 @@ Plugin {
 }
 
 Plugin {
+    type = launchbar
+    Config {
+        Button {
+            id=/usr/share/applications/sts-keyboard.desktop
+        }
+    }
+}
+
+Plugin {
     type = space
     expand=1
     Config {
