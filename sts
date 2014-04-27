@@ -39,6 +39,14 @@ case "$1" in
 			cellwriter --keyboard-only --dock-window=2 &
 		fi ;;
 	
+	apps)
+		# Show all installed applications, use single click to launch
+		# We dont need to specify window size since it will be maximized
+		# by Openbox.
+		yad --window-icon="/usr/share/pixmaps/slitaz-menu.png" \
+			--icons --single-click --sort-by-name \
+			--read-dir=/usr/share/applications ;;
+	
 	*|help)
 		echo "$(basename $0) [info|kill|keyboard|update]" ;;
 esac
