@@ -23,7 +23,7 @@ case "$1" in
 		# want to get latest configs.
 		rm -rf ${XDG_CONFIG_HOME}/sts
 		rm -rf ${XDG_CONFIG_HOME}/lxpanel/sts
-		echo "Please logout and login again our STS session" ;;
+		echo "Please logout and login again your STS session" ;;
 	
 	kill)
 		# Close button on panel so we can have undecorated windows
@@ -48,7 +48,7 @@ case "$1" in
 			--read-dir=/usr/share/applications ;;
 	
 	*|help)
-		echo "$(basename $0) [info|kill|keyboard|update]" ;;
+		echo "$(basename $0) [info|update|kill|keyboard|apps]" ;;
 esac
 
 exit 0
