@@ -7,8 +7,7 @@ if [ ! "$DBUS_SESSION_BUS_ADDRESS" ]; then
 fi
 
 # Desktop background
-#hsetroot -fill /usr/share/images/sts-background.png &
-hsetroot -fill /usr/share/images/slitaz-arm-background.png &
+hsetroot -fill /usr/share/images/sts-background.jpg &
 
 # Desktop panel
 lxpanel -p sts &
