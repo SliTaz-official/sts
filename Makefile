@@ -3,7 +3,9 @@
 
 DESTDIR?=
 PREFIX?=/usr
-IMAGES=$(DESTDIR)$(PREFIX)/share/images
+
+DATA=$(DESTDIR)$(PREFIX)/share
+IMAGES=$(DATA)/images
 
 all:
 
@@ -11,10 +13,11 @@ all:
 
 install:
 	install -m 0755 -d $(DESTDIR)$(PREFIX)/bin
-	install -m 0755 -d $(DESTDIR)$(PREFIX)/share/sts
-	install -m 0755 -d $(DESTDIR)$(PREFIX)/share/images
+	install -m 0755 -d $(DATA)/slitaz/sts
+	install -m 0755 -d $(IMAGES)
 	cp -a sts* $(DESTDIR)$(PREFIX)/bin
-	cp -a openbox $(DESTDIR)$(PREFIX)/share/sts
-	cp -a lxpanel $(DESTDIR)$(PREFIX)/share/sts
-	cp -a applications $(DESTDIR)$(PREFIX)/share
+	cp -a openbox $(DATA)/slitaz/sts
+	cp -a lxpanel $(DATA)/slitaz/sts
+	cp -a applications $(DATA)
 	cp -a images/sts-background.jpg $(IMAGES)
+
