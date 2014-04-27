@@ -27,6 +27,11 @@ if [ ! -d "${XDG_CONFIG_HOME}/openbox/lxpanel/sts" ]; then
 	cp -rf ${data}/lxpanel ${XDG_CONFIG_HOME}
 fi
 
+# Idesk support
+if [ -x "/usr/bin/idesk" ] && [ ! -d "${HOME}/.idesktop" ]; then
+	mkdir -p ${HOME}/.idesktop
+fi
+
 # Start Openbox
 exec openbox --config-file ${obconf}/sts-rc.xml \
 	--startup ${obconf}/sts-autostart

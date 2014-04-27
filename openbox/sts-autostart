@@ -11,3 +11,6 @@ hsetroot -fill /usr/share/images/sts-background.jpg &
 
 # Desktop panel
 lxpanel -p sts &
+
+# Desktop icons
+#(sleep 2; idesk &) &
