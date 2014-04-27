@@ -15,12 +15,12 @@ can also be started by Slim or with startx and an appropriate ~/.xsession file.
 
 Packages of interest
 --------------------
-Here are some tools that could be usefull for tiny/touch screens:
+Here are some tools that could be useful for tiny/touch screens:
 
 	* xprop          : Window properties 
 	* xwininfo       : Window information
 	* xautomation    : Control X from cmdline
-	* mygestures     : Mouse gesture-recognition
+	* mygestures     : Mouse gestures/recognition
 	* idesk          : Desktop icons
 
 
