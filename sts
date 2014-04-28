@@ -23,7 +23,7 @@ case "$1" in
 		# want to get latest configs.
 		rm -rf ${XDG_CONFIG_HOME}/sts
 		rm -rf ${XDG_CONFIG_HOME}/lxpanel/sts
-		echo "Please logout and login again our STS session" ;;
+		echo "Please logout and login again your STS session" ;;
 	
 	kill)
 		# Close button on panel so we can have undecorated windows
@@ -32,7 +32,7 @@ case "$1" in
 		kill ${pid} ;;
 	
 	keyboard)
-		# Switch on/of the OSD Keyboard powered by Cellwrite
+		# Switch on/off the OSD Keyboard powered by Cellwrite
 		if ps | grep -q 'cellwriter --keyboard-only'; then
 			cellwriter --hide-window
 		else
@@ -41,7 +41,7 @@ case "$1" in
 	
 	apps)
 		# Show all installed applications, use single click to launch
-		# We dont need to specify window size since it will be maximized
+		# We don't need to specify window size since it will be maximized
 		# by Openbox.
 		yad --window-icon="/usr/share/pixmaps/slitaz-menu.png" \
 			--icons --single-click --sort-by-name \
