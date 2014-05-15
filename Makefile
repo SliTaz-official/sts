@@ -17,6 +17,7 @@ install:
 	install -m 0755 -d $(IMAGES)
 	cp -a sts* $(DESTDIR)$(PREFIX)/bin
 	cp -a openbox $(DATA)/slitaz/sts
+	cp -a tint2 $(DATA)/slitaz/sts
 	cp -a lxpanel $(DATA)/slitaz/sts
 	cp -a applications $(DATA)
 	cp -a images/sts-background.jpg $(IMAGES)

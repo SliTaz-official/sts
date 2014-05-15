@@ -11,8 +11,9 @@ data="/usr/share/slitaz/sts"
 case "$1" in
 	info)
 		if [ "$STS_DESKTOP_WM" ]; then
-			echo "STS_DESKTOP_WM : $STS_DESKTOP_WM"
-			echo "STS_DESKTOP_ID : $STS_DESKTOP_ID"
+			echo "STS_DESKTOP_ID  : $STS_DESKTOP_ID"
+			echo "STS_DESKTOP_WM  : $STS_DESKTOP_WM"
+			echo "STS_CONFIG_HOME : $STS_CONFIG_HOME"
 		else
 			echo "The sts desktop is not running"
 		fi ;;

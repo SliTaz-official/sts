@@ -56,7 +56,7 @@ Plugin {
     type = launchbar
     Config {
         Button {
-            id=/usr/share/applications/sts-keyboard.desktop
+            id=/usr/share/applications/sts-kill.desktop
         }
     }
 }
@@ -109,13 +109,3 @@ Plugin {
         iface=wlan0
     }
 }
-
-Plugin {
-    type = launchbar
-    Config {
-        Button {
-            id=/usr/share/applications/sts-kill.desktop
-        }
-    }
-}
-

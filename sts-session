@@ -3,11 +3,13 @@
 # Start SliTaz Tiny/Touch Screens desktop session
 #
 
-export STS_DESKTOP_WM="openbox"
-export STS_DESKTOP_ID="$$"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+
+export STS_DESKTOP_ID="$$"
+export STS_DESKTOP_WM="openbox"
+export STS_CONFIG_HOME="$XDG_CONFIG_HOME/sts"
 
 data="/usr/share/slitaz/sts"
 sts="${XDG_CONFIG_HOME}/sts"
@@ -24,8 +26,13 @@ if [ ! -x "${XDG_CONFIG_HOME}/sts/autostart" ]; then
 	chmod +x ${sts}/autostart
 fi
 
-# LXpanel configs
-if [ ! -d "${XDG_CONFIG_HOME}/lxpanel/sts" ]; then
+# Tint2 panel 
+if [ ! -f "${XDG_CONFIG_HOME}/sts/tint2rc" ]; then
+	cp ${data}/tint2/tint2rc ${XDG_CONFIG_HOME}/sts
+fi
+
+# LXpanel configs support
+if [ -x "/usr/bin/lxpanel" ] && [ ! -d "${XDG_CONFIG_HOME}/lxpanel/sts" ]; then
 	cp -rf ${data}/lxpanel ${XDG_CONFIG_HOME}
 fi
 

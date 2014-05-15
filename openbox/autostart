@@ -9,8 +9,11 @@ fi
 # Desktop background
 hsetroot -fill /usr/share/images/sts-background.jpg &
 
-# Desktop panel
+# Desktop panel with LXpanel
 lxpanel -p sts &
 
-# Desktop icons
+# Desktop panel with Tint2
+#tint2 -c ${STS_CONFIG_HOME}/tint2rc
+
+# Desktop icons with Idesk
 #(sleep 2; idesk &) &
