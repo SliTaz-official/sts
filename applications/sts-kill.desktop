@@ -2,5 +2,6 @@
 Type=Application
 Name=Close Application
 Name[fr]=Fermer l'application
+Name[ru]=Закрыть приложение
 Exec=sts kill
 Icon=gtk-close

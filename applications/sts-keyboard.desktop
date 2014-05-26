@@ -2,6 +2,7 @@
 Type=Application
 Name=Virtual Keyboard
 Name[fr]=Clavier virtuel
+Name[ru]=Виртуальная клавиатура
 Exec=sts keyboard
 Icon=preferences-desktop-keyboard
-StartupNotify=tru
+StartupNotify=true
